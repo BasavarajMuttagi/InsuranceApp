@@ -1,0 +1,64 @@
+{
+  "name": "insurance-app-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^4.23.2",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.1",
+    "delimit-stream": "^0.1.0",
+    "easyinvoice": "^2.3.3",
+    "html-react-parser": "^3.0.4",
+    "loan": "^0.0.2",
+    "loan-calculations": "^1.0.1",
+    "lodash": "^4.17.21",
+    "nodemailer": "^6.7.8",
+    "pocketbase": "^0.7.0",
+    "react": "^18.2.0",
+    "react-accessible-dropdown-menu-hook": "^3.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-crossfade-image": "^1.2.0",
+    "react-dom": "^18.2.0",
+    "react-paystack": "^4.0.1",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.4.0",
+    "react-scripts": "5.0.1",
+    "react-search-input": "^0.11.3",
+    "react-select": "^5.4.0",
+    "react-simple-invoice": "^1.0.14",
+    "react-slideshow-image": "^4.0.5",
+    "react-switch": "^7.0.0",
+    "react-toastify": "^9.0.8",
+    "react-trix": "^0.10.0",
+    "trix": "^2.0.0-beta.0",
+    "uuid": "^9.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

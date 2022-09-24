@@ -1,0 +1,551 @@
+{
+  "_id": {
+    "$oid": "632e0246413d8ce23620661f"
+  },
+  "adminId": "b3b7a41c-7d6b-43de-9fb8-a8540dd27e04",
+  "role": "6328a1e4dbfe780c9819e3cc",
+  "firstName": "Basavaraj",
+  "lastName": "M",
+  "credential": {
+    "$oid": "632e0246413d8ce23620661d"
+  },
+  "DOB": "24-08-2000",
+  "age": "22",
+  "city": "BIJAPUR",
+  "state": "KAR",
+  "country": "IN",
+  "phone": 7676791722,
+  "email": "basavaraj2770@gmail.com",
+  "address": "Keerti Nagar BIJAPUR",
+  "isActive": true,
+  "commissionWithdrawalRequests": [
+    {
+      "$oid": "632da447f4f8deb716cb6918"
+    },
+    {
+      "$oid": "632d880f1d34183d1e212ed1"
+    },
+    {
+      "$oid": "632e14fef6071d59e51fef2b"
+    },
+    {
+      "$oid": "632e14fef6071d59e51fef2b"
+    },
+    {
+      "$oid": "632e993d3db1e232e61fc07f"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663959622187"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663998309061"
+    }
+  },
+  "__v": 0
+}
+
+
+{
+  "_id": {
+    "$oid": "632c45ecaf5e031e3115ef19"
+  },
+  "agentId": "4fd717a1-fe1c-40d6-bd3d-8e98fc68266b",
+  "role": "63277f70cafa69b4d0ccf8d0",
+  "firstName": "Agent",
+  "lastName": "Vinod",
+  "credential": {
+    "$oid": "632c45ecaf5e031e3115ef17"
+  },
+  "DOB": "2022-09-23",
+  "age": "10",
+  "city": "ff",
+  "state": "ff",
+  "country": "ff",
+  "phone": 9999999999999,
+  "email": "vinod@gmail.com",
+  "address": "ff",
+  "affiliate": [],
+  "isActive": true,
+  "transactions": [
+    {
+      "$oid": "632c4b9faf5e031e3115f011"
+    },
+    {
+      "$oid": "632c5873af5e031e3115f109"
+    },
+    {
+      "$oid": "632c63262c1f8d2c27d13856"
+    },
+    {
+      "$oid": "632c92429fb9041ae94dd7fd"
+    },
+    {
+      "$oid": "632c92559fb9041ae94dd81e"
+    },
+    {
+      "$oid": "632c92d99fb9041ae94dd862"
+    },
+    {
+      "$oid": "632c92e49fb9041ae94dd87e"
+    },
+    {
+      "$oid": "632c93259fb9041ae94dd8c7"
+    },
+    {
+      "$oid": "632c95069fb9041ae94dd90e"
+    },
+    {
+      "$oid": "632c9c50c827e08792782d84"
+    },
+    {
+      "$oid": "632c9f8dcdc2a21f97e796ef"
+    },
+    {
+      "$oid": "632cafeeb297434d3a4245de"
+    },
+    {
+      "$oid": "632cc1cbb297434d3a4246f1"
+    },
+    {
+      "$oid": "632d5435f9db33979c079bed"
+    },
+    {
+      "$oid": "632d5473f9db33979c079c18"
+    },
+    {
+      "$oid": "632d880f1d34183d1e212ed1"
+    },
+    {
+      "$oid": "632da447f4f8deb716cb6918"
+    },
+    {
+      "$oid": "632da4d3f4f8deb716cb697c"
+    },
+    {
+      "$oid": "632e14fef6071d59e51fef2b"
+    },
+    {
+      "$oid": "632e93623db1e232e61fbffd"
+    },
+    {
+      "$oid": "632e95753db1e232e61fc048"
+    },
+    {
+      "$oid": "632e993d3db1e232e61fc07f"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663845868261"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663998269569"
+    }
+  },
+  "__v": 0
+}
+
+
+{
+  "_id": {
+    "$oid": "63272e89cafa69b4d0ccf5ce"
+  },
+  "city": "Bijapur",
+  "isActive": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663512201335"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663512201335"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "63272e6dcafa69b4d0ccf5c2"
+  },
+  "country": "India",
+  "states": [
+    {
+      "$oid": "63272e7acafa69b4d0ccf5c6"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663512173886"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663512186225"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "632c45ecaf5e031e3115ef17"
+  },
+  "credentialId": "2456a5f1-9da1-4222-9a59-d1ceab94f40e",
+  "userName": "vinod123",
+  "password": "$2b$10$6cqcYBQvi6hTD.ZqQDTkCOj/j4aSpyfmCjlOhxZiC3ujhRGtQgLbG",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663845868257"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663845868257"
+    }
+  },
+  "__v": 0
+}
+
+
+{
+  "_id": {
+    "$oid": "632d526cf9db33979c079baf"
+  },
+  "agentUserName": "vinod123",
+  "customerId": "5a73e424-4810-44c9-b770-e14dd4d511ca",
+  "role": "6328262b70638d9561a8f0bd",
+  "firstName": "Basavaraj",
+  "lastName": "Muttagi",
+  "credential": {
+    "$oid": "632d526cf9db33979c079bad"
+  },
+  "DOB": "2022-09-25",
+  "age": "10",
+  "city": "Bijapur",
+  "state": "Karnataka",
+  "country": "India",
+  "phone": 999999999999,
+  "email": "basavaraj2770@gmail.com",
+  "address": "KKK",
+  "policies": [],
+  "documents": [],
+  "isActive": true,
+  "transactions": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663914604789"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663914604789"
+    }
+  },
+  "__v": 0
+}
+
+
+{
+  "_id": {
+    "$oid": "632c461baf5e031e3115ef1f"
+  },
+  "employeeId": "53818e65-ecc5-490a-b9a1-6edd302b42b1",
+  "role": "63277f5ccafa69b4d0ccf8cb",
+  "firstName": "kimi",
+  "lastName": "rikennon",
+  "credential": {
+    "$oid": "632c461baf5e031e3115ef1d"
+  },
+  "DOB": "2022-09-23",
+  "age": "10",
+  "city": "ff",
+  "state": "ff",
+  "country": "ff",
+  "phone": 9999999999,
+  "email": "kimi@gmail.com",
+  "address": "ff",
+  "isActive": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663845915518"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663845915518"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "632c4543af5e031e3115ef00"
+  },
+  "planType": "63272fb8cafa69b4d0ccf5df",
+  "planId": "123456789",
+  "planName": "Secure Family",
+  "planImage": "http://127.0.0.1:8090/api/files/nsewxdkev2uo2d5/1a8mw0isxrpp2vz/insurance_family_mDzKlPwGvE.jpg",
+  "planDescription": "<ul><li>Cancer Insurance Plans -&nbsp;A cancer insurance plan is a health policy specifically designed to offer financial protection against the costs of several types and stages of cancer. The plan can offer high lump sum payouts on the diagnosis of cancer</li><li>Critical Illness Plans -&nbsp;Critical illness plans are a type of health insurance plans which provides money for the treatment of major critical illnesses like kidney ailments, liver disorders, heart attacks, cancer, paralysis, and more. Critical illness plans offer a high sum assured that can be adequate to cover the costs of such illnesses. They also provide lump sum payouts on the first diagnosis of a critical illness without the claimant having to submit any hospital bills</li><li>Individual Health Insurance Plans -&nbsp;This is a basic health insurance plan that covers an individual. The coverage and sum assured can depend on the age, gender, and health status of the person</li><li>Family Floater Insurance Plans -&nbsp;These health insurance plans offer umbrella coverage that covers the entire family under a single policy. These plans have a unified premium and sum assured for all the members of the family. They can be used to cover costs like hospitalisation, surgeries, room rent, and more</li><li>Personal Accident Insurance Plans -&nbsp;A personal accident insurance is a health policy that covers the cost of treatment due to an accident. These plans cover the life assured and offer a payout to cover expenses like ambulance costs, emergency surgery expenses, doctor’s consultation, and more</li></ul><p><br></p>",
+  "policyTermMin": "5",
+  "policyTermMax": "10",
+  "minAge": "22",
+  "maxAge": "60",
+  "minInvestment": "1000000",
+  "maxInvestment": "2000000",
+  "agentCommissionForReg": "10",
+  "agentCommissionForImt": "5",
+  "documents": [],
+  "isActive": true,
+  "interestRate": "10",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663845699242"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663915410559"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "63272fb8cafa69b4d0ccf5df"
+  },
+  "plantype": "Health Insurance Plans",
+  "plans": [
+    {
+      "$oid": "63276156cafa69b4d0ccf6bd"
+    },
+    {
+      "$oid": "632b68b9201b8a7d2e377a38"
+    },
+    {
+      "$oid": "632c4543af5e031e3115ef00"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663512504459"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663845699256"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "632e993d3db1e232e61fc095"
+  },
+  "plantype": {
+    "$oid": "63272fb8cafa69b4d0ccf5df"
+  },
+  "plan": {
+    "$oid": "632c4543af5e031e3115ef00"
+  },
+  "customer": "sam123",
+  "totalInvestment": "300000",
+  "InstallmentPeriod": "2",
+  "NumberOfInstallments": "10",
+  "InstallmentAmount": "100000",
+  "InterestAmount": "30000",
+  "TotalAmount": "330000",
+  "installmentPaymentDates": [
+    {
+      "paymentDay": "2022-09-24T05:44:29.435Z",
+      "isActive": true,
+      "paymentId": 1
+    },
+    {
+      "paymentDay": "2023-09-24T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 2
+    },
+    {
+      "paymentDay": "2024-09-23T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 3
+    },
+    {
+      "paymentDay": "2025-09-23T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 4
+    },
+    {
+      "paymentDay": "2026-09-23T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 5
+    },
+    {
+      "paymentDay": "2027-09-23T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 6
+    },
+    {
+      "paymentDay": "2028-09-22T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 7
+    },
+    {
+      "paymentDay": "2029-09-22T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 8
+    },
+    {
+      "paymentDay": "2030-09-22T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 9
+    },
+    {
+      "paymentDay": "2031-09-22T05:44:29.435Z",
+      "isActive": false,
+      "paymentId": 10
+    }
+  ],
+  "isActive": true,
+  "DateCreated": "09/24/2022",
+  "MaturityDate": "2031-09-22T05:44:29.435Z",
+  "interestRate": "10",
+  "SumAssured": "330000",
+  "transactionObjectId": {
+    "$oid": "632e993d3db1e232e61fc07f"
+  },
+  "planType": "Health Insurance Plans",
+  "planName": "Secure Family",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663998269989"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663998269989"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "632d560ff9db33979c079d05"
+  },
+  "queryId": "b4979071-05d4-4303-843f-72c821764118",
+  "customerId": "632c43cb8629615833a3c3f8",
+  "query": "<p>ok let me see</p>",
+  "replies": [],
+  "isActive": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663915535189"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663915535189"
+    }
+  },
+  "__v": 0
+}
+
+
+{
+  "_id": {
+    "$oid": "6328a1e4dbfe780c9819e3cc"
+  },
+  "role": "admin",
+  "isActive": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663607268969"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663607268969"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "63272e7acafa69b4d0ccf5c6"
+  },
+  "state": "Karnataka",
+  "cities": [
+    {
+      "$oid": "63272e89cafa69b4d0ccf5ce"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663512186203"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663512201352"
+    }
+  },
+  "__v": 0
+}
+
+{
+  "_id": {
+    "$oid": "632e993d3db1e232e61fc07f"
+  },
+  "DateCreated": "09/24/2022",
+  "MaturityDate": "2031-09-22T05:44:29.435Z",
+  "interestRate": "10",
+  "SumAssured": "330000",
+  "plantype": "63272fb8cafa69b4d0ccf5df",
+  "plan": "632c4543af5e031e3115ef00",
+  "customer": "sam123",
+  "totalInvestment": "300000",
+  "InstallmentPeriod": "2",
+  "NumberOfInstallments": [
+    10
+  ],
+  "InstallmentAmount": "100000",
+  "InterestAmount": "30000",
+  "TotalAmount": "330000",
+  "planName": "Secure Family",
+  "planType": "Health Insurance Plans",
+  "agent": "vinod123",
+  "agentCommissionForImt": "5",
+  "agentCommissionForReg": "10",
+  "comissionAmount": "30000",
+  "premiumType": "FirstPremium",
+  "comissionAmountPaymentStatus": true,
+  "taxAmount": "118000",
+  "paymentMode": "Credit Card",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663998269459"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663998375648"
+    }
+  },
+  "__v": 0
+}
