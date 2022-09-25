@@ -141,7 +141,7 @@ console.log({DateCreated ,MaturityDate,interestRate : planObject.interestRate
      
      
      
-         await axios.post('http://localhost:8888/api/createpolicy',{DateCreated,MaturityDate,interestRate:planObject.interestRate,SumAssured,plantype:planObject.planType._id,plan:planObject._id,customer:userName,totalInvestment:amount,InstallmentPeriod:installmentPeriod,NumberOfInstallments,InstallmentAmount:eachinstallment,InterestAmount:interestamount,TotalAmount:totalamount,installmentPaymentDates,transactionObjectId:value,planType:planObject.planType.plantype,planName:planObject.planName})
+         await axios.post('http://localhost:8888/api/createpolicy',{DateCreated,MaturityDate,interestRate:planObject.interestRate,SumAssured,plantype:planObject.planType._id,plan:planObject._id,customer:userName,totalInvestment:amount,InstallmentPeriod:installmentPeriod,NumberOfInstallments,InstallmentAmount:eachinstallment,InterestAmount:interestamount,TotalAmount:totalamount,installmentPaymentDates,transactionObjectId:value,planType:planObject.planType.plantype,planName:planObject.planName,requestSent:false})
          .then((response)=>{
             counter++
              console.log(response.data);

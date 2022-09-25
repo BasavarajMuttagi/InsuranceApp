@@ -78,6 +78,8 @@ import PaymentReceipt from './components/CustomerDashBoard/PaymentReceipt';
 import ChatsInAdmin from './components/chats';
 import ChangePassword from './components/CustomerDashBoard/changepassword';
 import ViewInsuranceAccountsInAdmin from './components/AdminDashBoard/ViewInsuranceAccounts';
+import PolicyClaim from './components/CustomerDashBoard/PolicyClaim';
+import PolicyClaimSettlement from './components/AdminDashBoard/PolicyClaimSettlement';
 
 
 
@@ -175,6 +177,8 @@ function App() {
       <Route exact path='/completechat' element={<ChatsInAdmin/>} />
       <Route exact path='/changepassword' element={<ChangePassword/>} />
       <Route exact path='/allinsuranceaccounts' element={<ViewInsuranceAccountsInAdmin/>} />
+      <Route exact path='/policyclaim' element={<PolicyClaim/>} />
+      <Route exact path='/policyclaimsettlement' element={<PolicyClaimSettlement/>} />
       <Route exact path='/' element={<Home/>} />
     </Routes>
   );

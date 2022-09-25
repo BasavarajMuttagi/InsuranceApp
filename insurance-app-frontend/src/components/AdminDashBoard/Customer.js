@@ -6,8 +6,7 @@ function Customer() {
        <NavDropdown.Item   href="/allcustomers">View Customers</NavDropdown.Item>
        <NavDropdown.Item   href="/queries">View Customer Queries</NavDropdown.Item>
        <NavDropdown.Item   href="/allinsuranceaccounts">View Insurance Accounts</NavDropdown.Item>
-       <NavDropdown.Item   href="#">View Policy Claims</NavDropdown.Item>
-       <NavDropdown.Item   href="#">View Policy Payments</NavDropdown.Item>
+       <NavDropdown.Item   href="/policyclaimsettlement">Policy Claim Settlement</NavDropdown.Item>
     </NavDropdown>
     </> );
 }

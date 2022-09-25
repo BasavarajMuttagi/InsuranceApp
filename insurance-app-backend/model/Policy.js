@@ -18,7 +18,8 @@ const PolicySchema = mongoose.Schema({
     SumAssured :{type:String,required:true},
     transactionObjectId :{type: mongoose.SchemaTypes.ObjectId,required:true,ref:"Transactions"}, 
     planType:{type:String,required:true},
-    planName:{type:String,required:true}
+    planName:{type:String,required:true},
+    requestSent:{type: Boolean,required:true}
     },{
         timestamps: true 
     }

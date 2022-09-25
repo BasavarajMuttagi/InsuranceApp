@@ -2,7 +2,7 @@ const DatabaseMongoose = require("../repository/DB")
 const DB = new DatabaseMongoose()
 
 class Policy{
-    constructor(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName){
+    constructor(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName,requestSent){
      this.plantype = plantype
      this.plan = plan
      this.customer = customer
@@ -23,14 +23,13 @@ class Policy{
      this.planName=planName
     }
 
-    static async createPolicy(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName){
-            const newcreatePolicy = new Policy(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName)
+    static async createPolicy(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName,requestSent){
+            const newcreatePolicy = new Policy(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName,requestSent)
             const createPolicyRecord = await DB.createPoilcy(newcreatePolicy)
             return createPolicyRecord
     }
 
     static async getOnePolicy(policyObjectId){
-        console.log(policyObjectId + "Hello");
         const createPolicyRecord = await DB.getOnePoilcy(policyObjectId)
         return createPolicyRecord
     }
@@ -43,6 +42,11 @@ class Policy{
     static async findPolicyByUserName(userName){
         const createPolicyRecord = await DB.findPolicyUsingUserName(userName)
         return createPolicyRecord
+    }
+
+    static async updatePolicy(policyObjectId,property,value){
+            const updateRecord = await DB.updatePolicyClaim(policyObjectId,property,value)
+            return updateRecord
     }
 
 }

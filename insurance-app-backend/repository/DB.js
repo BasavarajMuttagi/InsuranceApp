@@ -886,7 +886,22 @@ class DatabaseMongoose {
         }
     }
 
-
+    async updatePolicyClaim(policyObjectId,property,value){
+        try {
+            const newRecord = await PolicyModel.updateOne(
+                {
+                    _id:policyObjectId
+                },
+                {
+                    $set :{ [property] : value}
+                }
+                )
+            return newRecord
+        }
+        catch (err) {
+            return false
+        }
+    }
 
 }
 

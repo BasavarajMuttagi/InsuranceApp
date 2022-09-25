@@ -4,6 +4,7 @@ function InsuranceAccountsInCustomer() {
     <>
     <NavDropdown id="nav-dropdown-dark-example" title="Insurance Account" menuVariant="dark">
        <NavDropdown.Item   href="/mypolicies">View Policies</NavDropdown.Item>
+       <NavDropdown.Item   href="/policyclaim">Claim Policy</NavDropdown.Item>
     </NavDropdown>
     </> );
 }

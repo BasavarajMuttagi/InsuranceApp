@@ -12,6 +12,7 @@ function ViewInsuranceAccountsInAdmin() {
     const [toggle,setToggle] = useState(false)
     const [dates,setDates] = useState('')
     const role = localStorage.getItem('user')
+    
     const getAllPolicies =async()=>{
         await axios.get('http://localhost:8888/api/getallpolicies',{})
         .then((response)=>{

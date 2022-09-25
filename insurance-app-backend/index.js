@@ -404,6 +404,14 @@ app.put("/api/updateplan",async(req,resp)=>{
     resp.status(200).send(updatedRecord)
     return
 })
+
+app.put("/api/updatepolicy",async(req,resp)=>{
+    const {policyObjectId,property,value} = req.body
+    const updatedRecord = await Policy.updatePolicy(policyObjectId,property,value)
+    resp.status(200).send(updatedRecord)
+    return
+})
+
 app.put("/api/updateplantype",async(req,resp)=>{
     const {planTypeId,property,value} = req.body
     console.log(planTypeId,property,value);
@@ -832,7 +840,7 @@ app.post("/api/createquery",async(req,resp)=>{
 
 app.post("/api/createpolicy",async(req,resp)=>{
 
-    const {DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName} = req.body
+    const {DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName,requestSent} = req.body
    
     const currentUser = await Helper.findCustomerInCollection(customer)
     if(currentUser === false){
@@ -846,7 +854,7 @@ app.post("/api/createpolicy",async(req,resp)=>{
         return 
     }
 
-    const policyRecord = await Policy.createPolicy(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName)
+    const policyRecord = await Policy.createPolicy(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName,requestSent)
     const pushPolicy = await Customer.UpdateOneCustomerPolicy(customer,'policies',policyRecord._id)
     resp.status(200).send(pushPolicy);
     return 

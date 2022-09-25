@@ -4,7 +4,7 @@ function CardMenuInsurancePlansInCustomer() {
     return ( 
     <>
     <CustomerNavBar/>
-   <CardMenuInsurancePlans/>
+    <CardMenuInsurancePlans/>
     </> );
 }
 
