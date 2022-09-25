@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import EmployeeNavBar from "../EmployeeDashBoard/EmployeeNavBar";
+import AdminNavBar from "./AdminNavBar";
 
 
 function WithDrawAmountApproval() {
 let counter = 0
     const [requestList,setRequestList] = useState([])
     const [approvalStatus,setApprovalStatus] = useState([])
-
+    const role = localStorage.getItem('user')
     const getOneAdmin =async()=>{
         await axios.get('http://localhost:8888/api/getadmin',{})
         .then((response)=>{
@@ -54,7 +56,8 @@ let counter = 0
     
        return(
        <>
-    <div className="text-center m-3"><h1>View Commission</h1></div>
+       { role === 'admin'? <AdminNavBar/> : role === 'employee'? <EmployeeNavBar/>:''}
+    <div className="text-center m-3"><h1>Commission Requests</h1></div>
        <div className="table-responsive m-5">
         <table className="table table-bordered ">
             <thead>

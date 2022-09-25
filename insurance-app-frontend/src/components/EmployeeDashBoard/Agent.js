@@ -5,8 +5,8 @@ function Agent() {
     <NavDropdown id="nav-dropdown-dark-example" title="Agent" menuVariant="dark">
        <NavDropdown.Item   href="/createagent">Add Agent</NavDropdown.Item>
        <NavDropdown.Item   href="/allagents">View Agents</NavDropdown.Item>
-       <NavDropdown.Item   href="#">View Commission</NavDropdown.Item>
-       <NavDropdown.Item   href="#">View Commission Withdrawal</NavDropdown.Item>
+       <NavDropdown.Item   href="/viewallagentcommissions">View Commissions</NavDropdown.Item>
+       <NavDropdown.Item   href="/commissionapproval">Comission Withdrawal Requests</NavDropdown.Item>
     </NavDropdown>
     </> );
 }

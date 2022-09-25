@@ -469,7 +469,7 @@ class DatabaseMongoose {
     
     async getAllPolicies(){
         try {
-            const newRecord = await PolicyModel.find({}).populate('transactionObjectId')
+            const newRecord = await PolicyModel.find({}).populate('transactionObjectId').populate('plan').populate('plantype')
             return newRecord
         } catch (error) {
             return false
@@ -869,6 +869,16 @@ class DatabaseMongoose {
     async findOnePlan(planName){
         try {
             const newRecord = await PlanModel.find({planName:planName})
+            return newRecord
+        }
+        catch (err) {
+            return false
+        }
+    }
+
+    async findPolicyUsingUserName(userName){
+        try {
+            const newRecord = await PolicyModel.find({customer:userName})
             return newRecord
         }
         catch (err) {

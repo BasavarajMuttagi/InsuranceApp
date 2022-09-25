@@ -150,7 +150,7 @@ if(transfersuccess !== 200){
 
                  </table>
                  <h2 className="m-5 ">Card Details</h2>
-                 <form >
+                 
                  <table className="table  text-dark border border-dark table-bordered m-5 w-50">
                         <tr >
                             <th className=" p-4">Card Number</th>
@@ -197,13 +197,13 @@ if(transfersuccess !== 200){
                             <th className=" p-4" >Pay </th>
                             <td  className=" p-4" >
                             <div className="form-floating mb-3 text-center">
-                            <button type="button" class="btn btn-primary" onSubmit={()=>{handleUpdateCustomerPayment(policy._id,location.state.paymentId,true)}}>Pay</button>
+                            <button type="button" class="btn btn-primary" onClick={()=>{handleUpdateCustomerPayment(policy._id,location.state.paymentId,true)}}>Pay</button>
                             </div>
                             </td>
                         </tr>
                        
                  </table>
-                 </form>
+                 
                  <div>{ transfersuccess === 200 ? transferSuccessToast() : null}</div>
                  
     

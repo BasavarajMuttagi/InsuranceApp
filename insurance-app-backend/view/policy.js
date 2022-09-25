@@ -40,6 +40,11 @@ class Policy{
         return createPolicyRecord
     }
 
+    static async findPolicyByUserName(userName){
+        const createPolicyRecord = await DB.findPolicyUsingUserName(userName)
+        return createPolicyRecord
+    }
+
 }
 
 

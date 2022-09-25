@@ -77,6 +77,7 @@ import ViewAllAgentCommissions from './components/AdminDashBoard/ViewAllAgentCom
 import PaymentReceipt from './components/CustomerDashBoard/PaymentReceipt';
 import ChatsInAdmin from './components/chats';
 import ChangePassword from './components/CustomerDashBoard/changepassword';
+import ViewInsuranceAccountsInAdmin from './components/AdminDashBoard/ViewInsuranceAccounts';
 
 
 
@@ -173,6 +174,7 @@ function App() {
       <Route exact path='/paymentreceipt' element={<PaymentReceipt/>} />
       <Route exact path='/completechat' element={<ChatsInAdmin/>} />
       <Route exact path='/changepassword' element={<ChangePassword/>} />
+      <Route exact path='/allinsuranceaccounts' element={<ViewInsuranceAccountsInAdmin/>} />
       <Route exact path='/' element={<Home/>} />
     </Routes>
   );

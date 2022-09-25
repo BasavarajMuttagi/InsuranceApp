@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import EmployeeNavBar from "../EmployeeDashBoard/EmployeeNavBar";
+import AdminNavBar from "./AdminNavBar";
 
 function ViewAllAgentCommissions() {
     const [allTransactions,setAllTransactions] = useState([])
-
+    const role = localStorage.getItem('user')
 
     const getAllTransactions =async()=>{
         
@@ -31,7 +33,7 @@ function ViewAllAgentCommissions() {
             <td >{eachTransaction.premiumType}</td>
             <td>{eachTransaction.customer}</td>
             <td >{eachTransaction.comissionAmount}</td>
-            {/* <td><button type="button" class="btn btn-primary" onSubmit={()=>{handleRequestPayment()}}>Request Payment</button></td> */}
+           <td>{eachTransaction.comissionAmountPaymentStatus === true ? 'Approved':eachTransaction.requestSent === true ? 'RequestPending':'-'}</td>
  </tr>
     </>
     )
@@ -41,7 +43,8 @@ function ViewAllAgentCommissions() {
 
    return(
    <>
-<div className="text-center m-3"><h1>Commission Withdrawal Requests</h1></div>
+          { role === 'admin'? <AdminNavBar/> : role === 'employee'? <EmployeeNavBar/>:''}
+<div className="text-center m-3"><h1>Agent Commissions</h1></div>
    <div className="table-responsive m-5">
     <table className="table table-bordered ">
         <thead>

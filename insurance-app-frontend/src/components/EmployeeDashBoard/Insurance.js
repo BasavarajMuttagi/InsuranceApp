@@ -4,7 +4,7 @@ function InsuranceInEmployee() {
     <>
     <NavDropdown id="nav-dropdown-dark-example" title="Insurance" menuVariant="dark">
        <NavDropdown.Item   href="/allcustomers">View Customers</NavDropdown.Item>
-       <NavDropdown.Item   href="/insuranceaccountsinagent">Insurance Account</NavDropdown.Item>
+       <NavDropdown.Item   href="/allinsuranceaccounts">Insurance Account</NavDropdown.Item>
        <NavDropdown.Item   href="#">View Policy Claim</NavDropdown.Item>
        <NavDropdown.Item   href="#">View Policy Payments</NavDropdown.Item>
 

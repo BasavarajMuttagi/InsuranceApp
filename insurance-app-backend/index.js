@@ -247,8 +247,9 @@ app.post("/api/getoneemployee",async(req,resp)=>{
 
 app.post("/api/getoneemployeusingusername",async(req,resp)=>{
     const schema = Joi.object({
-        employeeId:Joi.string().min(3).required()
+        userName:Joi.string().min(3).required()
     })
+     console.log(req.body);
 
     const {error,val} = schema.validate(req.body)
     if(error){
@@ -817,25 +818,35 @@ app.post("/api/createquery",async(req,resp)=>{
         return 
 })
 
-app.post("/api/replyquery",async(req,resp)=>{
-    const {userName,queryObjectId,query} = req.body
-    console.log( req.body);
-    const currentUser = await Helper.findCustomerInCollection(userName)
-    const queryRecord = await Query.createQuery(currentUser._id,query)
-    console.log(queryRecord._id);
-    const replyRecord = await Query.AddReplyQuery(queryObjectId,queryRecord._id)
-    console.log(replyRecord);
-    resp.status(200).send(replyRecord);
-    return
-})
+// app.post("/api/replyquery",async(req,resp)=>{
+//     const {userName,queryObjectId,query} = req.body
+//     console.log( req.body);
+//     const currentUser = await Helper.findCustomerInCollection(userName)
+//     const queryRecord = await Query.createQuery(currentUser._id,query)
+//     console.log(queryRecord._id);
+//     const replyRecord = await Query.AddReplyQuery(queryObjectId,queryRecord._id)
+//     console.log(replyRecord);
+//     resp.status(200).send(replyRecord);
+//     return
+// })
 
 app.post("/api/createpolicy",async(req,resp)=>{
+
     const {DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName} = req.body
-    console.log(req.body);
+   
     const currentUser = await Helper.findCustomerInCollection(customer)
-    console.log(currentUser);
+    if(currentUser === false){
+        resp.status(400).send("Not a User")
+        return 
+    }
+
+    const record = Policy.findPolicyByUserName(customer)
+    if(record !== false){
+        resp.status(400).send("Policy Already Bought")
+        return 
+    }
+
     const policyRecord = await Policy.createPolicy(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,installmentPaymentDates,transactionObjectId,planType,planName)
-    console.log(policyRecord);
     const pushPolicy = await Customer.UpdateOneCustomerPolicy(customer,'policies',policyRecord._id)
     resp.status(200).send(pushPolicy);
     return 
@@ -843,12 +854,12 @@ app.post("/api/createpolicy",async(req,resp)=>{
 
 app.post("/api/getonepolicy",async(req,resp)=>{
     const {policyObjectId} = req.body
-    console.log(req.body);
     const policyRecord = await Policy.getOnePolicy(policyObjectId)
     resp.status(200).send(policyRecord);
     return 
 })
 app.get("/api/getallpolicies",async(req,resp)=>{
+    console.log('Get Policies here');
     const policyRecord = await Policy.getAllPolicies()
     resp.status(200).send(policyRecord);
     return 
@@ -879,7 +890,7 @@ app.get("/api/getalltransactions",async(req,resp)=>{
 
 app.post("/api/getparticulartransaction",async(req,resp)=>{
     const {property,value} = req.body
-    console.log(req.body);
+   
     const TransactionRecord = await Transaction.getparticularTransaction(property,value)
     resp.status(200).send(TransactionRecord);
     return 
@@ -887,9 +898,9 @@ app.post("/api/getparticulartransaction",async(req,resp)=>{
 
 app.post("/api/createtransaction",async(req,resp)=>{
     const {DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,planName,planType,agent,agentCommissionForImt,agentCommissionForReg,comissionAmount,premiumType,comissionAmountPaymentStatus,taxAmount,paymentMode,requestSent} = req.body
-    console.log(req.body);
+  
     const TransactionRecord = await Transaction.createTransaction(DateCreated,MaturityDate,interestRate,SumAssured,plantype,plan,customer,totalInvestment,InstallmentPeriod,NumberOfInstallments,InstallmentAmount,InterestAmount,TotalAmount,planName,planType,agent,agentCommissionForImt,agentCommissionForReg,comissionAmount,premiumType,comissionAmountPaymentStatus,taxAmount,paymentMode,requestSent)
-    console.log(TransactionRecord);
+
     resp.status(200).send(TransactionRecord);
     return 
 })
